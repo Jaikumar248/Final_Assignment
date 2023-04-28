@@ -1,0 +1,46 @@
+<h2>UCBOS</h2>
+<div class="registerPage" *ngIf="registration">
+    
+    <h2 id="heading">Create a new account</h2>
+    <p id="heading">It's quick and easy.</p>
+   <form >
+    <hr>
+    <div class="registerForm" >
+        <label >User Name </label>
+        <input type="text" class="form-control">
+        <label >First Name</label>
+        <input type="text"  class="form-control">
+        <label > last Name</label>
+        <input type="text"  class="form-control">
+        <label > Mobile Number </label>
+        <input type="text"  class="form-control">
+        <label > Date of birth</label>
+        <input type="date"  class="form-control"><br>
+        <label >Gender </label> 
+        <input type="radio" value="Male" name="gender">
+        <label >Male</label>
+        <input type="radio" value="Female" name="gender">
+        <label >Female</label>
+        <input type="radio" value="Others" name="gender">
+        <label > Others</label>
+    </div>
+    <hr>
+    <button>Login</button>
+    <p>Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
+   </form>
+</div>
+
+<div *ngIf="loginForm">
+    <h2>UCBOS</h2>
+    <div>
+        <h3>Log in to UCBOS</h3>
+        <form >
+            <input type="text" class="form-control" placeholder="Mobile Number">
+            <label >{{captcha}}</label>
+            <input type="text" class="form-control" placeholder="Enter the Captcha">
+
+            <button>Log in</button>
+            <p>Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign up</a></p>
+        </form>
+    </div>
+</div>
