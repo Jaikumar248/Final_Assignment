@@ -3,11 +3,80 @@
 }
 
 .registerPage {
-    background-color: #fff;
-    border-radius: 0 0 8px 8px;
-    border-top: 1px solid #dadde1;
-    box-sizing: border-box;
-    padding: 16px;
-    position: relative;
-    width: 432px;
+    margin-top: 10px;
+    margin-left: 525px;
+    background-color: white;
+    height: 615px;
+    border-radius: 2px;
+    width: 450px;
+    border: 2px solid rgb(230, 238, 240);
+    
+}
+.registerForm {
+    width: 350px;
+    margin-left: 50px;
+}
+#heading {
+    padding-top: 20px;
+    text-align: center;
+}
+#text {
+    text-align: center;
+}
+.loginBtn {
+    padding-left: 100px;
+    margin-left: 100px;
+    padding-right: 100px;
+}
+.text {
+    text-align: center;
+    padding: 10px;
+}
+#star {
+    color: red;
+}
+#ucbosHeading {
+    text-align: center;
+    color: blue;
+    margin-top: 20px;
+    font-size: 40px;
+    font-weight: 700;
+}
+.male {
+    margin-left: 20px;
+}
+
+.loginForm {
+    margin-top: 40px;
+    margin-left: 530px;
+    background-color: white;
+    height: 350px;
+    border-radius: 2px;
+    width: 450px;
+    border: 2px solid rgb(230, 238, 240);
+}
+.content {
+    width: 350px;
+    margin-left: 45px;
+}
+#loginHeading {
+    text-align: center;
+    padding: 15px;
+}
+.loginButton {
+    margin-top: 20px;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#captcha {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: x-large;
+    text-align: center;
+    color: azure;
+    background-image: url("https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+}
+.label {
+    margin-top: 5px;
 }

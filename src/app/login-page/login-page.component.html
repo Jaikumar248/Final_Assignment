@@ -1,46 +1,47 @@
-<h2>UCBOS</h2>
+<h2 id="ucbosHeading">UCBOS</h2>
 <div class="registerPage" *ngIf="registration">
     
-    <h2 id="heading">Create a new account</h2>
-    <p id="heading">It's quick and easy.</p>
+    <h3 id="heading">Create a new account</h3>
+    <p id="text">It's quick and easy.</p>
    <form >
     <hr>
     <div class="registerForm" >
-        <label >User Name </label>
+        <label >User Name <span id="star">*</span> </label>
         <input type="text" class="form-control">
-        <label >First Name</label>
+        <label class="label">First Name <span id="star">*</span></label>
         <input type="text"  class="form-control">
-        <label > last Name</label>
+        <label class="label"> last Name <span id="star">*</span></label>
         <input type="text"  class="form-control">
-        <label > Mobile Number </label>
+        <label class="label"> Mobile Number <span id="star">*</span> </label>
         <input type="text"  class="form-control">
-        <label > Date of birth</label>
+        <label class="label"> Date of birth <span id="star">*</span></label>
         <input type="date"  class="form-control"><br>
-        <label >Gender </label> 
-        <input type="radio" value="Male" name="gender">
+        <label >Gender <span id="star">*</span></label> 
+        <input type="radio" value="Male" name="gender" class="male">
         <label >Male</label>
-        <input type="radio" value="Female" name="gender">
+        <input type="radio" value="Female" name="gender" class="male">
         <label >Female</label>
-        <input type="radio" value="Others" name="gender">
+        <input type="radio" value="Others" name="gender" class="male">
         <label > Others</label>
     </div>
     <hr>
-    <button>Login</button>
-    <p>Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
+    <button class="loginBtn btn btn-success">Login</button>
+    <p class="text">Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
    </form>
 </div>
 
-<div *ngIf="loginForm">
-    <h2>UCBOS</h2>
-    <div>
-        <h3>Log in to UCBOS</h3>
-        <form >
+<div *ngIf="loginForm" class="loginForm">
+    <div class="content">
+        <h3 id="loginHeading">Log in to UCBOS</h3>
+        <form #login=ngForm (ngSubmit)="loginSubmit(login.value)" ngNativeValidate >
             <input type="text" class="form-control" placeholder="Mobile Number">
-            <label >{{captcha}}</label>
-            <input type="text" class="form-control" placeholder="Enter the Captcha">
+            <!-- <img src="https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=""> -->
+            <p id="captcha">{{number}} {{operator}} {{number1}} = </p>
+            <input type="text" class="form-control" placeholder="Enter the Captcha" ngModel name = captcha>
 
-            <button>Log in</button>
-            <p>Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign up</a></p>
+            <button  class="loginButton btn btn-primary" >Log in</button>
+            <p class="text">Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign up</a></p>
         </form>
     </div>
 </div>
+
