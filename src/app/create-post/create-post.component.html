@@ -1,4 +1,99 @@
 
-<i class="pi pi-images"></i>
-<input type="file" id="files" name="files" multiple>
+<!-- <i class="pi pi-images"></i> -->
+<!-- <input type="file" id="files" name="files" multiple> -->
 
+<div class="fullPage">
+    <div class="writePostContainer">
+        <div class="userProfile">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+            <div>
+                <p>Jaikumar</p>
+                <small>Public</small>
+            </div>
+        </div>
+    
+        <div class="postInputContainer">
+            <textarea  rows="3" placeholder="Write some thing here"></textarea>
+        </div>
+        <div class="addPostLinks">
+            <a href=""><i class="pi pi-plus-circle"></i>Photo/Video</a>
+        </div>
+    </div>
+
+    <div class="postContainer">
+        <div class="userProfile">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+            <div>
+                <p>Jaikumar</p>
+                <span>June 30 2022, 10:30pm</span>
+            </div>
+        </div>
+        <p class="postText">Write some thing here.............</p>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="postImage">
+        <div class="postRow">
+            <div class="activityIcons">
+                <div ><i class="pi pi-heart" (click)="like()"  *ngIf="!isLiked"></i>
+                    <i class="pi pi-heart-fill" *ngIf="isLiked"></i>
+                    <p id="likesValue">{{likes}} like   </p>
+                </div>
+                
+                <div><i class="pi pi-comment" (click)="addComment()" style="cursor: pointer;"></i></div>
+                <div><i class="pi pi-share-alt" ></i></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="postContainer">
+        <div class="userProfile">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+            <div>
+                <p>Jaikumar</p>
+                <span>June 30 2022, 10:30pm</span>
+            </div>
+        </div>
+        <p class="postText">Write some thing here.............</p>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="postImage">
+        <div class="postRow">
+            <div class="activityIcons">
+                <div><i class="pi pi-heart" ></i></div>
+                <div><i class="pi pi-comment" ></i></div>
+                <div><i class="pi pi-share-alt" ></i></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="postContainer">
+        <div class="userProfile">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+            <div>
+                <p>Jaikumar</p>
+                <span>June 30 2022, 10:30pm</span>
+            </div>
+        </div>
+        <p class="postText">Write some thing here.............</p>
+        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" class="postImage">
+        <div class="postRow">
+            <div class="activityIcons">
+                <div><i class="pi pi-heart" ></i></div>
+                <div><i class="pi pi-comment" ></i></div>
+                <div><i class="pi pi-share-alt" ></i></div>
+            </div>
+        </div>
+    </div>
+
+    <p-dialog  [(visible)]="displayDialogBox" [closable]="true">
+       <h5 id="comments">Comments</h5>
+       <hr>
+       <div class="commentsBox">
+
+       </div>
+       <div class="commentInput">
+        <input placeholder="add a comment for Jaikumar">
+        <i class="pi  pi-send"></i>
+       </div>
+ 
+    </p-dialog>
+    <!-- <textarea  id="dialogBox" cols="30" placeholder="add a comment for Jaikumar" ></textarea><i class="pi  pi-send"></i> -->
+</div>

@@ -8,11 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class CreatePostComponent implements OnInit{
 
   displayDialogBox:boolean = false;
-  
+  likes:number = 0;
+  isLiked:boolean = false; 
   ngOnInit(): void {
+   
+  }
+
+  addComment(){
     this.displayDialogBox = true; 
   }
 
-
-
+  like(){
+   this.isLiked = true;
+   this.likes++;
+  }
 }

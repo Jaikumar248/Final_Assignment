@@ -2,3 +2,159 @@
     color: red;
     font-size: xx-large;
 }
+
+.writePostContainer {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+}
+
+.userProfile img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.userProfile p {
+    margin-bottom: -5px;
+    font-weight: 500;
+    color: #626262;
+}
+.postInputContainer {
+    padding-left: 55px;
+    padding-top: 20px;
+}
+.postInputContainer textarea {
+    width: 100%;
+    /* margin: 20px; */
+    /* margin-left: -500px; */
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+}
+.addPostLinks {
+    display: flex;
+    margin-top: 10px;
+}
+.addPostLinks a{
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    color: #626262;
+    margin-right: 30px;
+    font-size: 13;
+}
+.addPostLinks a i {
+    font-size: xx-large;
+    margin-left: 50px;
+    margin-right: 15px;
+}
+
+.fullPage {
+    margin-top: 50px;
+    width: 50%;
+    background-color: #efefef;
+    height: 100vh;
+    margin-left: 380px;
+}
+.postContainer {
+    width: 100%;
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+    margin: 20px 0;
+}
+.userProfile span  {
+    font-size: 13px;
+    color: #626262;
+}
+.postText {
+    color: #9a9a9a;
+    margin: 15px 0;
+    font-size: 15px;
+}
+.postImage {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.postRow {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+.activityIcons div i {
+    width: 18px;
+    font-size: xx-large;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.activityIcons div {
+    display: inline-flex;
+    text-align: center;
+    margin-right: 30px;
+}
+:host ::ng-deep  .p-dialog  #dialogBox{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none; 
+    min-height: 200px;
+}
+:host ::ng-deep .p-dialog {
+    width: 47.5%;
+    margin-left: 43px;
+}
+:host ::ng-deep #comments {
+    text-align: center;
+}
+.commentsBox {
+    width: 100%;
+    height: 300px;
+    overflow: auto;
+    min-width: 40px;
+    max-width: 600px;
+    padding: 0 1em;
+   
+}
+.commentInput {
+    display: flex; 
+    justify-content: space-between;
+}
+.commentInput input {
+    width: 95%;
+    border-radius: 10px;
+    color: #626262;
+}
+:host ::ng-deep .commentInput i  {
+    background-color: #1876f2;
+    padding: 15px;
+    color: white;
+    border-radius: 50%;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.pi-heart-fill {
+    color: red;
+}
+#likesValue {
+   display: flex;
+   align-items: center;
+   margin-left: 20px;
+   margin-top: 5px;
+   font-size: x-large;
+}

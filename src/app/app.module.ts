@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import {DialogModule} from 'primeng/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {DialogModule} from 'primeng/dialog';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    DialogModule
+    DialogModule,
+    BrowserAnimationsModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
