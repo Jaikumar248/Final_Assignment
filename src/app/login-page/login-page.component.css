@@ -50,7 +50,7 @@
     margin-top: 40px;
     margin-left: 550px;
     background-color: white;
-    height: 350px;
+    height: 410px;
     border-radius: 2px;
     width: 450px;
     border: 2px solid rgb(230, 238, 240);
@@ -70,7 +70,7 @@
 }
 #captcha {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 2px;
     padding: 5px;
     font-size: x-large;
     text-align: center;
@@ -79,4 +79,7 @@
 }
 .label {
     margin-top: 5px;
+}
+.loginLabel {
+    margin: 10px;
 }

@@ -10,6 +10,9 @@ export class CreatePostComponent implements OnInit{
   displayDialogBox:boolean = false;
   likes:number = 0;
   isLiked:boolean = false; 
+  showImageFolder:boolean = false;
+  comments = "angular";
+  displayComments :String[]= [];
   ngOnInit(): void {
    
   }
@@ -21,5 +24,12 @@ export class CreatePostComponent implements OnInit{
   like(){
    this.isLiked = true;
    this.likes++;
+  }
+  upLoadImages(){
+    this.showImageFolder = true;
+  }
+  postComments(){
+    this.displayComments.push(this.comments);
+    this.comments = '';
   }
 }

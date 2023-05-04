@@ -4,13 +4,11 @@
 }
 
 .writePostContainer {
-    width: 100%;
+    
     background: #fff;
     border-radius: 6px;
     padding: 20px;
     color: #626262;
-    /* display: flex;
-    justify-content: center; */
 }
 
 .userProfile {
@@ -35,8 +33,6 @@
 }
 .postInputContainer textarea {
     width: 100%;
-    /* margin: 20px; */
-    /* margin-left: -500px; */
     border: 0;
     outline: 0;
     border-bottom: 1px solid #ccc;
@@ -61,15 +57,9 @@
     margin-right: 15px;
 }
 
-.fullPage {
-    margin-top: 50px;
-    width: 50%;
-    background-color: #efefef;
-    height: 100vh;
-    margin-left: 380px;
-}
+
 .postContainer {
-    width: 100%;
+    flex-basis: 47%;
     background: #fff;
     border-radius: 6px;
     padding: 20px;
@@ -118,20 +108,22 @@
 :host ::ng-deep .p-dialog {
     width: 47.5%;
     margin-left: 43px;
+    min-height: 300px;
 }
 :host ::ng-deep #comments {
     text-align: center;
 }
 .commentsBox {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     overflow: auto;
     min-width: 40px;
     max-width: 600px;
     padding: 0 1em;
-   
+    min-height: 50px;
 }
 .commentInput {
+   margin-top: 100px;
     display: flex; 
     justify-content: space-between;
 }
@@ -157,4 +149,62 @@
    margin-left: 20px;
    margin-top: 5px;
    font-size: x-large;
+}
+#fileInput{
+    display: none;
+}
+#icon{
+    cursor: pointer;
+  }
+#comment {
+    color: black;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+.leftSidebar {
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    position: sticky;
+}
+.rightSidebar {
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    position: sticky;
+}
+
+.fullPage {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #efefef;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+    box-sizing: border-box;
+}
+.sidebarNames {
+    margin-top: 30px;
+}
+.sidebarNames a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: fit-content;
+    cursor: pointer;
+}
+.sidebarNames a i {
+    width: 25px;
+    margin-right: 25px;
+    font-size: x-large;
+    display: flex;
+    
+}
+.sidebarNames a i span {
+    margin-left: 20px;
 }

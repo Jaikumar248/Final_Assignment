@@ -16,15 +16,11 @@ export class HomeComponent {
   showLogout(){
     this.logoutButton = true;
     this.nameIcon = false;
-  
   }
 
   logout(){
     localStorage.clear();
     this.router.navigate(['']);
   }
-
-  postImage(){
-    this.router.navigate(['/createpost']);
-  }
+ 
 }
