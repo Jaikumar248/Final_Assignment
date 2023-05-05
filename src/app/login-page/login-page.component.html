@@ -1,49 +1,52 @@
 <h2 id="ucbosHeading">UCBOS</h2>
 <div class="registerPage" *ngIf="registration">
-    
+
     <h3 id="heading">Create a new account</h3>
     <p id="text">It's quick and easy.</p>
-   <form >
-    <hr>
-    <div class="registerForm" >
-        <label >User Name <span id="star">*</span> </label>
-        <input type="text" class="form-control">
-        <label class="label">First Name <span id="star">*</span></label>
-        <input type="text"  class="form-control">
-        <label class="label"> last Name <span id="star">*</span></label>
-        <input type="text"  class="form-control">
-        <label class="label"> Mobile Number <span id="star">*</span> </label>
-        <input type="text"  class="form-control">
-        <label class="label"> Date of birth <span id="star">*</span></label>
-        <input type="date"  class="form-control"><br>
-        <label >Gender <span id="star">*</span></label> 
-        <input type="radio" value="Male" name="gender" class="male">
-        <label >Male</label>
-        <input type="radio" value="Female" name="gender" class="male">
-        <label >Female</label>
-        <input type="radio" value="Others" name="gender" class="male">
-        <label > Others</label>
-    </div>
-    <hr>
-    <button class="loginBtn btn btn-success">Login</button>
-    <p class="text">Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
-   </form>
+    <form ngNativeValidate>
+        <hr>
+        <div class="registerForm">
+            <label>User Name <span id="star">*</span> </label>
+            <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" required minlength="3" maxlength="20">
+            <label class="label">First Name <span id="star">*</span></label>
+            <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" required minlength="3" maxlength="20">
+            <label class="label"> last Name <span id="star">*</span></label>
+            <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" required minlength="3" maxlength="20">
+            <label class="label"> Mobile Number <span id="star">*</span> </label>
+            <input type="text" class="form-control" required pattern="^((\\+91-?)|0)?[0-9]{10}$">
+            <label class="label"> Date of birth <span id="star">*</span></label> <br>
+            <!-- <input type="date" name="dob"  class="form-control"  required><br> -->
+            <p-calendar placeholder="dd-mm-yyyy" [maxDate]="todayDate"></p-calendar><br>
+            <div class="gender">
+                <label>Gender <span id="star">*</span></label>
+                <input type="radio" value="Male" name="gender" class="male" required>
+                <label id="radio">Male</label>
+                <input type="radio" value="Female" name="gender" class="male" required>
+                <label id="radio">Female</label>
+                <input type="radio" value="Others" name="gender" class="male" required>
+                <label id="radio"> Others</label>
+            </div>
+        </div>
+        <hr>
+        <button class="loginBtn btn btn-success" (click)="login()">Sign Up</button>
+        <p class="text">Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
+    </form>
 </div>
 
 <div *ngIf="loginForm" class="loginForm">
     <div class="content">
         <h3 id="loginHeading">Log in to UCBOS</h3>
-        <form #login=ngForm (ngSubmit)="loginSubmit(login.value)" ngNativeValidate >
+        <form #login=ngForm (ngSubmit)="loginSubmit(login.value)" ngNativeValidate>
             <label class="loginLabel">Mobile Number <span id="star">*</span></label>
-            <input type="text" class="form-control" placeholder="Mobile Number">
+            <input type="text" class="form-control" placeholder="Mobile Number" pattern="^((\\+91-?)|0)?[0-9]{10}$">
             <!-- <img src="https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=""> -->
             <p id="captcha">{{number}} {{operator}} {{number1}} = </p>
             <label class="loginLabel">Enter Captcha <span id="star">*</span></label>
-            <input type="text" class="form-control" placeholder="Enter the Captcha" ngModel name = captcha>
+            <input type="text" class="form-control" placeholder="Enter the Captcha" ngModel name=captcha>
 
-            <button  class="loginButton btn btn-primary" >Log in</button>
-            <p class="text">Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign up</a></p>
+            <button class="loginButton btn btn-primary">Log in</button>
+            <p class="text">Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign up</a>
+            </p>
         </form>
     </div>
 </div>
-

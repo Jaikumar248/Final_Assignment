@@ -18,6 +18,7 @@ export class LoginPageComponent implements OnInit{
   number1:any;
   index:any;
   operator:any;
+  todayDate = new Date();
 
   constructor( private router:Router){}
   ngOnInit(): void {
@@ -57,6 +58,10 @@ export class LoginPageComponent implements OnInit{
   login(){
     this.registration = false;
     this.loginForm = true;
+  }
+  
+  date(){
+    
   }
 
 }

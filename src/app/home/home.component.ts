@@ -8,19 +8,19 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent {
 
-  constructor(private router:Router){}
+  constructor(private router: Router) { }
 
-  logoutButton:boolean = false;
-  nameIcon:boolean = true;
+  logoutButton: boolean = false;
+  nameIcon: boolean = true;
 
-  showLogout(){
+  showLogout() {
     this.logoutButton = true;
     this.nameIcon = false;
   }
 
-  logout(){
+  logout() {
     localStorage.clear();
     this.router.navigate(['']);
   }
- 
+
 }

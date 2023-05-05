@@ -4,7 +4,6 @@
 }
 
 .writePostContainer {
-    
     background: #fff;
     border-radius: 6px;
     padding: 20px;
@@ -16,21 +15,24 @@
     align-items: center;
 }
 
-.userProfile img{
+.userProfile img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin-right: 10px;
 }
+
 .userProfile p {
     margin-bottom: -5px;
     font-weight: 500;
     color: #626262;
 }
+
 .postInputContainer {
     padding-left: 55px;
     padding-top: 20px;
 }
+
 .postInputContainer textarea {
     width: 100%;
     border: 0;
@@ -39,11 +41,13 @@
     background: transparent;
     resize: none;
 }
+
 .addPostLinks {
     display: flex;
     margin-top: 10px;
 }
-.addPostLinks a{
+
+.addPostLinks a {
     text-decoration: none;
     display: flex;
     text-align: center;
@@ -51,12 +55,12 @@
     margin-right: 30px;
     font-size: 13;
 }
+
 .addPostLinks a i {
     font-size: xx-large;
     margin-left: 50px;
     margin-right: 15px;
 }
-
 
 .postContainer {
     flex-basis: 47%;
@@ -66,73 +70,85 @@
     color: #626262;
     margin: 20px 0;
 }
-.userProfile span  {
+
+.userProfile span {
     font-size: 13px;
     color: #626262;
 }
+
 .postText {
     color: #9a9a9a;
     margin: 15px 0;
     font-size: 15px;
 }
+
 .postImage {
     width: 100%;
     border-radius: 4px;
     margin-bottom: 5px;
 }
+
 .postRow {
     display: flex;
     text-align: center;
     justify-content: space-between;
 }
+
 .activityIcons div i {
     width: 18px;
     font-size: xx-large;
     margin-right: 10px;
     margin-top: 10px;
 }
+
 .activityIcons div {
     display: inline-flex;
     text-align: center;
     margin-right: 30px;
 }
-:host ::ng-deep  .p-dialog  #dialogBox{
+
+:host ::ng-deep .p-dialog #dialogBox {
     width: 100%;
     border: 0;
     outline: 0;
     border-bottom: 1px solid #ccc;
     background: transparent;
-    resize: none; 
+    resize: none;
     min-height: 200px;
 }
+
 :host ::ng-deep .p-dialog {
     width: 47.5%;
     margin-left: 43px;
     min-height: 300px;
 }
+
 :host ::ng-deep #comments {
     text-align: center;
 }
+
 .commentsBox {
     width: 100%;
-    /* height: 300px; */
     overflow: auto;
     min-width: 40px;
     max-width: 600px;
     padding: 0 1em;
     min-height: 50px;
 }
+
 .commentInput {
-   margin-top: 100px;
-    display: flex; 
+    margin-top: 100px;
+    display: flex;
     justify-content: space-between;
 }
+
 .commentInput input {
     width: 95%;
     border-radius: 10px;
     color: #626262;
 }
-:host ::ng-deep .commentInput i  {
+
+:host ::ng-deep .commentInput i {
     background-color: #1876f2;
     padding: 15px;
     color: white;
@@ -140,27 +156,33 @@
     margin-left: 10px;
     cursor: pointer;
 }
+
 .pi-heart-fill {
     color: red;
 }
+
 #likesValue {
-   display: flex;
-   align-items: center;
-   margin-left: 20px;
-   margin-top: 5px;
-   font-size: x-large;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 5px;
+    font-size: x-large;
 }
-#fileInput{
+
+#fileInput {
     display: none;
 }
-#icon{
+
+#icon {
     cursor: pointer;
-  }
+}
+
 #comment {
     color: black;
     font-weight: 400;
     padding-bottom: 5px;
 }
+
 .leftSidebar {
     flex-basis: 25%;
     position: sticky;
@@ -168,12 +190,18 @@
     align-self: flex-start;
     position: sticky;
 }
+
 .rightSidebar {
     flex-basis: 25%;
     position: sticky;
     top: 70px;
     align-self: flex-start;
     position: sticky;
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    color: #626262;
+    margin-left: 20px;
 }
 
 .fullPage {
@@ -186,9 +214,11 @@
     padding: 13px 5%;
     box-sizing: border-box;
 }
+
 .sidebarNames {
     margin-top: 30px;
 }
+
 .sidebarNames a {
     text-decoration: none;
     display: flex;
@@ -198,13 +228,30 @@
     width: fit-content;
     cursor: pointer;
 }
+
 .sidebarNames a i {
     width: 25px;
     margin-right: 25px;
     font-size: x-large;
     display: flex;
-    
 }
+
 .sidebarNames a i span {
     margin-left: 20px;
+}
+
+/* .advertisement {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0px;
+} */
+.advertisement img {
+    width: 100%;
+    margin-top: -20px;
+    border-radius: 4px;
+}
+
+#seeMore {
+    color: #1876f2;
 }

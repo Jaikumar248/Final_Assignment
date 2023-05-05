@@ -10,31 +10,37 @@
     border-radius: 2px;
     width: 450px;
     border: 2px solid rgb(230, 238, 240);
-    
 }
+
 .registerForm {
     width: 350px;
     margin-left: 50px;
 }
+
 #heading {
     padding-top: 20px;
     text-align: center;
 }
+
 #text {
     text-align: center;
 }
+
 .loginBtn {
     padding-left: 100px;
     margin-left: 100px;
     padding-right: 100px;
 }
+
 .text {
     text-align: center;
     padding: 10px;
 }
+
 #star {
     color: red;
 }
+
 #ucbosHeading {
     text-align: center;
     color: blue;
@@ -42,6 +48,7 @@
     font-size: 40px;
     font-weight: 700;
 }
+
 .male {
     margin-left: 20px;
 }
@@ -55,19 +62,23 @@
     width: 450px;
     border: 2px solid rgb(230, 238, 240);
 }
+
 .content {
     width: 350px;
     margin-left: 45px;
 }
+
 #loginHeading {
     text-align: center;
     padding: 15px;
 }
+
 .loginButton {
     margin-top: 20px;
     padding-left: 150px;
     padding-right: 150px;
 }
+
 #captcha {
     margin-top: 10px;
     margin-bottom: 2px;
@@ -77,9 +88,23 @@
     color: azure;
     background-image: url("https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
 }
+
 .label {
     margin-top: 5px;
 }
+
 .loginLabel {
     margin: 10px;
+}
+
+#radio {
+    margin-left: 5px;
+}
+
+:host ::ng-deep .p-calendar {
+    width: 100%;
+}
+
+.gender {
+    margin-top: 10px;
 }

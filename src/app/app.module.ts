@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import {DialogModule} from 'primeng/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CalendarModule} from 'primeng/calendar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -18,14 +20,16 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     LoginPageComponent,
     HomeComponent,
     FooterComponent,
-    CreatePostComponent
+    CreatePostComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     DialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CalendarModule,
+    NgbModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]
