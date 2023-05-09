@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { MessageService } from 'primeng/api';
@@ -12,7 +13,8 @@ import {DialogModule} from 'primeng/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CalendarModule} from 'primeng/calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import {ToastModule} from 'primeng/toast';
+import {PanelModule} from 'primeng/panel';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     DialogModule,
     BrowserAnimationsModule,
     CalendarModule,
-    NgbModule
+    NgbModule,
+    ToastModule,
+    PanelModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

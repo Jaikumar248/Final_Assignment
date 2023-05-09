@@ -11,25 +11,25 @@
     <div>
         <div class="writePostContainer">
             <div class="userProfile">
-                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" >
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
                 <div>
                     <p>Jaikumar</p>
                     <small>Public</small>
                 </div>
             </div>
 
-           <form #create="ngForm"  (submit)=" createPost(create.value)">
-            <div class="postInputContainer">
-                <textarea rows="3" placeholder="Write some thing here" ngModel name="desc"></textarea>
-            </div>
-            <div class="addPostLinks">
-                <label for="fileInput">
-                    <a><i id="icon" class="pi pi-plus-circle" (click)="upLoadImages()"></i>Photo/Video</a>
-                </label>
-                <input id="fileInput" type="file" multiple ngModel name="uploadImage">
-            </div>
-            <!-- <button type="save">save</button> -->
-           </form>
+            <form #create="ngForm" (submit)=" createPost(create.value)">
+                <div class="postInputContainer">
+                    <textarea rows="3" placeholder="Write some thing here" ngModel name="desc"></textarea>
+                </div>
+                <div class="addPostLinks">
+                    <label for="fileInput">
+                        <a><i id="icon" class="pi pi-plus-circle" (click)="upLoadImages()"></i>Photo/Video</a>
+                    </label>
+                    <input id="fileInput" type="file" multiple ngModel name="uploadImage">
+                </div>
+                <!-- <button type="save">save</button> -->
+            </form>
         </div>
 
         <div class="postContainer">
@@ -51,6 +51,26 @@
                     <div><i class="pi pi-comment" (click)="addComment()" style="cursor: pointer;"></i></div>
                     <div><i class="pi pi-share-alt"></i></div>
                 </div>
+
+                <p-panel header="Comments" *ngIf="displayDialogBox">
+                    <!-- <h4 id="comments">Comments</h4>
+                    <hr> -->
+                    <div class="commentsBox" *ngFor="let item of displayComments">
+                        <div class="userProfile userComment">
+                            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="">
+                            <div>
+                                <p>Jaikumar</p>
+                                <p id="comment">{{item}}</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="commentInput">
+                        <input placeholder="add a comment for Jaikumar" [(ngModel)]="comments">
+                        <i class="pi  pi-send" (click)="postComments()"></i>
+                    </div>
+                </p-panel>
             </div>
         </div>
 
@@ -78,7 +98,8 @@
         </div>
     </div>
 
-    <p-dialog [(visible)]="displayDialogBox" [closable]="true">
+
+    <!-- <p-dialog [(visible)]="displayDialogBox" [closable]="true">
         <h4 id="comments">Comments</h4>
         <hr>
         <div class="commentsBox" *ngFor="let item of displayComments">
@@ -97,7 +118,7 @@
             <i class="pi  pi-send" (click)="postComments()"></i>
         </div>
 
-    </p-dialog>
+    </p-dialog> -->
 
     <div class="rightSidebar">
         <div class="advertisement">
@@ -125,5 +146,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>

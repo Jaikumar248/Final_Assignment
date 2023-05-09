@@ -1,52 +1,62 @@
-<h2 id="ucbosHeading">UCBOS</h2>
-<div class="registerPage" *ngIf="registration">
+<div class="some">
+    <h2 id="ucbosHeading">UCBOS</h2>
+    <div class="registerPage" *ngIf="registration">
 
-    <h3 id="heading">Create a new account</h3>
-    <p id="text">It's quick and easy.</p>
-    <form ngNativeValidate>
-        <hr>
-        <div class="registerForm">
-            <label>User Name <span id="star">*</span> </label>
-            <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" required minlength="3" maxlength="20">
-            <label class="label">First Name <span id="star">*</span></label>
-            <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" required minlength="3" maxlength="20">
-            <label class="label"> last Name <span id="star">*</span></label>
-            <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" required minlength="3" maxlength="20">
-            <label class="label"> Mobile Number <span id="star">*</span> </label>
-            <input type="text" class="form-control" required pattern="^((\\+91-?)|0)?[0-9]{10}$">
-            <label class="label"> Date of birth <span id="star">*</span></label> <br>
-            <!-- <input type="date" name="dob"  class="form-control"  required><br> -->
-            <p-calendar placeholder="dd-mm-yyyy" [maxDate]="todayDate"></p-calendar><br>
-            <div class="gender">
-                <label>Gender <span id="star">*</span></label>
-                <input type="radio" value="Male" name="gender" class="male" required>
-                <label id="radio">Male</label>
-                <input type="radio" value="Female" name="gender" class="male" required>
-                <label id="radio">Female</label>
-                <input type="radio" value="Others" name="gender" class="male" required>
-                <label id="radio"> Others</label>
+        <h3 id="heading">Create a new account</h3>
+        <p id="text">It's quick and easy.</p>
+        <form #registerUser="ngForm" (ngSubmit)="registerUserSubmit(registerUser.value)" ngNativeValidate>
+            <hr>
+            <div class="registerForm">
+                <label>User Name <span id="star">*</span> </label>
+                <input type="text" class="form-control" ngModel pattern="[a-zA-Z\\s]*" name="username" required
+                    minlength="3" maxlength="20">
+                <label class="label">First Name <span id="star">*</span></label>
+                <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" ngModel name="firstName" required
+                    minlength="3" maxlength="20">
+                <label class="label"> last Name <span id="star">*</span></label>
+                <input type="text" class="form-control" pattern="[a-zA-Z\\s]*" ngModel name="lastName" required
+                    minlength="3" maxlength="20">
+                <label class="label"> Mobile Number <span id="star">*</span> </label>
+                <input type="text" class="form-control" name="mobileNumber" ngModel required
+                    pattern="^((\\+91-?)|0)?[0-9]{10}$">
+                <label class="label"> Date of birth <span id="star">*</span></label> <br>
+                <!-- <input type="date" name="dob"  class="form-control"  required><br> -->
+                <p-calendar placeholder="dd-mm-yyyy" [maxDate]="todayDate" ngModel name="dateOfBirth"></p-calendar><br>
+                <div class="gender">
+                    <label>Gender <span id="star">*</span></label>
+                    <input type="radio" value="Male" name="gender" ngModel class="male" required>
+                    <label id="radio">Male</label>
+                    <input type="radio" value="Female" name="gender" ngModel class="male" required>
+                    <label id="radio">Female</label>
+                    <input type="radio" value="Others" name="gender" ngModel class="male" required>
+                    <label id="radio"> Others</label>
+                </div>
             </div>
-        </div>
-        <hr>
-        <button class="loginBtn btn btn-success" (click)="login()">Sign Up</button>
-        <p class="text">Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
-    </form>
-</div>
-
-<div *ngIf="loginForm" class="loginForm">
-    <div class="content">
-        <h3 id="loginHeading">Log in to UCBOS</h3>
-        <form #login=ngForm (ngSubmit)="loginSubmit(login.value)" ngNativeValidate>
-            <label class="loginLabel">Mobile Number <span id="star">*</span></label>
-            <input type="text" class="form-control" placeholder="Mobile Number" pattern="^((\\+91-?)|0)?[0-9]{10}$">
-            <!-- <img src="https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=""> -->
-            <p id="captcha">{{number}} {{operator}} {{number1}} = </p>
-            <label class="loginLabel">Enter Captcha <span id="star">*</span></label>
-            <input type="text" class="form-control" placeholder="Enter the Captcha" ngModel name=captcha>
-
-            <button class="loginButton btn btn-primary">Log in</button>
-            <p class="text">Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign up</a>
-            </p>
+            <hr>
+            <button class="loginBtn btn btn-success" type="submit">Sign Up</button>
+            <p class="text">Already have an account? <a id="signUp" (click)="login()" type="button"> Login</a></p>
         </form>
     </div>
+
+    <div *ngIf="loginForm" class="loginForm">
+        <div class="content">
+            <h2 id="loginHeading">Log in to UCBOS</h2>
+            <form #login=ngForm (ngSubmit)="login.valid && loginSubmit(login.value)" ngNativeValidate>
+                <label class="loginLabel">Mobile Number <span id="star">*</span></label>
+                <input type="text" class="form-control" ngModel name="mobileNumber" placeholder="Mobile Number"
+                    pattern="^((\\+91-?)|0)?[0-9]{10}$" required>
+                <!-- <img src="https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=""> -->
+                <p id="captcha">{{number}} {{operator}} {{number1}} = </p>
+                <label class="loginLabel">Enter Captcha <span id="star">*</span></label>
+                <input type="text" class="form-control" placeholder="Enter the Captcha" ngModel name=captcha required>
+
+                <button class="loginButton btn btn-primary">Log in</button>
+                <p class="text">Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign
+                        up</a>
+                </p>
+            </form>
+        </div>
+    </div>
 </div>
+
+<p-toast></p-toast>

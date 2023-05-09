@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { UserServiceService } from '../services/user-service.service';
+import { DatePipe } from '@angular/common';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-login-page',
@@ -19,19 +21,25 @@ export class LoginPageComponent implements OnInit{
   index:any;
   operator:any;
   todayDate = new Date();
+  userExists:any;
 
-  constructor( private router:Router){}
+  constructor( private router:Router, private userService : UserServiceService, private messageService: MessageService){}
   ngOnInit(): void {
     this.generateCaptcha();
   }
 
   loginSubmit(data:any){
-    if(this.result == data.captcha){
+    this.userService.loginUser(data).subscribe((result)=>{
+    this.userExists = result;
+    if(this.userExists.mobileNumber === data.mobileNumber && this.result == data.captcha){
+      localStorage.setItem('loggedIn', JSON.stringify(this.userExists));
       this.router.navigate(['/home']);
     }
-    else{ 
+    else {
       this.generateCaptcha();
+      this.messageService.add({severity:'error', summary:'Error Message', detail:'Enter Correct Mobile Number and Captcha'});
     }
+    });
   }
 
   generateCaptcha(){
@@ -60,8 +68,17 @@ export class LoginPageComponent implements OnInit{
     this.loginForm = true;
   }
   
-  date(){
-    
-  }
+  registerUserSubmit(data:any){
+    console.log(data.dateOfBirth);
+    let pipe = new DatePipe('en-US');
+    const now = Date.now();
+    data.dateOfBirth = pipe.transform(data.dateOfBirth, "dd/MM/yyyy");
+    this.userService.registerUser(data).subscribe((result)=>{
+      this.messageService.add({severity:'success', summary:'Service Message', detail:'Register Successfully Please Login'});
+      this.registration = false;
+      this.loginForm = true;
+    });
 
+  }
+ 
 }

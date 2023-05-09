@@ -20,8 +20,8 @@ nav {
   height: 45px;
   padding: 10px;
   text-align: center;
-  background-color: rgb(170, 179, 179);
-  border: 2px solid rgb(231, 228, 228);;
+  background-color: rgb(231, 228, 228);
+  border: 2px solid rgb(231, 228, 228);
   border-radius: 50%;
   margin-left: 1350px;
   cursor: pointer;
@@ -41,6 +41,8 @@ nav {
     margin-left: 700px;
     position: absolute;
     color: rgb(231, 228, 228);
+    font-size: xx-large;
+    font-weight: 500;
 }
 
  h3 {

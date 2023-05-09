@@ -7,7 +7,7 @@
     margin-left: 550px;
     background-color: white;
     height: 615px;
-    border-radius: 2px;
+    border-radius: 12px;
     width: 450px;
     border: 2px solid rgb(230, 238, 240);
 }
@@ -58,7 +58,7 @@
     margin-left: 550px;
     background-color: white;
     height: 410px;
-    border-radius: 2px;
+    border-radius: 12px;
     width: 450px;
     border: 2px solid rgb(230, 238, 240);
 }
@@ -107,4 +107,11 @@
 
 .gender {
     margin-top: 10px;
+}
+
+.some {
+    position: absolute;
+    background-color: #efefef;
+    height: 100vh;
+    width: 100%;
 }

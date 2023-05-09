@@ -165,7 +165,7 @@
     display: flex;
     align-items: center;
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 16px;
     font-size: x-large;
 }
 
@@ -254,4 +254,9 @@
 
 #seeMore {
     color: #1876f2;
+}
+
+:host ::ng-deep.p-panel {
+    margin-top: 70px;
+    margin-left: -700px;
 }
