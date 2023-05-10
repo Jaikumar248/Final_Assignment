@@ -53,4 +53,9 @@ nav {
     float: right;
     margin-right: 10px;
 }
+:host ::ng-deep .p-dialog {
+    margin-top: -550px;
+    margin-left: 1420px; 
+    
+}
 

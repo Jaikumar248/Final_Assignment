@@ -15,6 +15,7 @@ import {CalendarModule} from 'primeng/calendar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {ToastModule} from 'primeng/toast';
 import {PanelModule} from 'primeng/panel';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {PanelModule} from 'primeng/panel';
     HomeComponent,
     FooterComponent,
     CreatePostComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

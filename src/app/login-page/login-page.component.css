@@ -82,7 +82,8 @@
 #captcha {
     margin-top: 10px;
     margin-bottom: 2px;
-    padding: 5px;
+    padding: 8px;
+    border-radius: 5px;
     font-size: x-large;
     text-align: center;
     color: azure;
@@ -90,6 +91,7 @@
 }
 
 .label {
+    margin-bottom: 5px;
     margin-top: 5px;
 }
 

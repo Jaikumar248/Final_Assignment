@@ -1,13 +1,12 @@
 <div class="some">
     <h2 id="ucbosHeading">UCBOS</h2>
     <div class="registerPage" *ngIf="registration">
-
         <h3 id="heading">Create a new account</h3>
         <p id="text">It's quick and easy.</p>
         <form #registerUser="ngForm" (ngSubmit)="registerUserSubmit(registerUser.value)" ngNativeValidate>
             <hr>
             <div class="registerForm">
-                <label>User Name <span id="star">*</span> </label>
+                <label class="label">User Name <span id="star">*</span> </label>
                 <input type="text" class="form-control" ngModel pattern="[a-zA-Z\\s]*" name="username" required
                     minlength="3" maxlength="20">
                 <label class="label">First Name <span id="star">*</span></label>
@@ -42,14 +41,12 @@
         <div class="content">
             <h2 id="loginHeading">Log in to UCBOS</h2>
             <form #login=ngForm (ngSubmit)="login.valid && loginSubmit(login.value)" ngNativeValidate>
-                <label class="loginLabel">Mobile Number <span id="star">*</span></label>
-                <input type="text" class="form-control" ngModel name="mobileNumber" placeholder="Mobile Number"
+                <label class="label">Mobile Number <span id="star">*</span></label>
+                <input type="text" class="form-control" ngModel name="mobileNumber" 
                     pattern="^((\\+91-?)|0)?[0-9]{10}$" required>
-                <!-- <img src="https://images.unsplash.com/photo-1520699514109-b478c7b48d3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bm9pc2UlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" alt=""> -->
                 <p id="captcha">{{number}} {{operator}} {{number1}} = </p>
-                <label class="loginLabel">Enter Captcha <span id="star">*</span></label>
-                <input type="text" class="form-control" placeholder="Enter the Captcha" ngModel name=captcha required>
-
+                <label class="label">Enter Captcha <span id="star">*</span></label>
+                <input type="text" class="form-control" ngModel name=captcha required>
                 <button class="loginButton btn btn-primary">Log in</button>
                 <p class="text">Don't have an account? <a id="signUp" type="button" (click)="registrationForm()">Sign
                         up</a>
